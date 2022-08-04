@@ -50,7 +50,7 @@ class ViewController: UIViewController {
                 throw LoginValidationError.invalidCred
             }
         } catch {
-            print(error )
+            print(error)
         }
     }
 
