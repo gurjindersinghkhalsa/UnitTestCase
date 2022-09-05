@@ -21,7 +21,7 @@ class LoginTestingUITests: XCTestCase {
         continueAfterFailure = false
         app = XCUIApplication()
         app.launch()
-    }
+    }   
 
 //    override func tearDownWithError() throws {
 //        // Put teardown code here. This method is called after the invocation of each test method in the class.
@@ -44,21 +44,10 @@ class LoginTestingUITests: XCTestCase {
         welcomeStaticText.tap()
         let buton = app.buttons["Check"]
         let button1 = app.staticTexts["Check"]
-        
-        let app = XCUIApplication()
-        app/*@START_MENU_TOKEN@*/.staticTexts["Check"]/*[[".buttons[\"Check\"].staticTexts[\"Check\"]",".staticTexts[\"Check\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        app.staticTexts["WELCOME"].tap()
-        app.windows.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .textField).element(boundBy: 0).tap()
-        app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .textField).element(boundBy: 1).tap()
-
-        if buton.isSelected {
-                        XCTAssertTrue(button1.exists)
+                if buton.isSelected {
+                    XCTAssertTrue(button1.exists)
             button1.tap()
         }
-        
-        app.windows.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .textField).element(boundBy: 0).tap()
-        app.children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .textField).element(boundBy: 1).tap()
-
                         
     }
     
